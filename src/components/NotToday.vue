@@ -62,10 +62,22 @@ export default {
   height: 100vh;
   background: black;
   .loading img {
-    width: 500px;
+    max-width: 100%;
+    padding: 20px;
+    filter: grayscale(50%);
+  }
+
+  figure {
+    text-align: center;
+    padding: 20px;
+    img {
+      max-width: 100%;
+    }
   }
   figcaption {
     color: white;
+    text-shadow: 2px 2px #a1a1a1;
+    font-size: 1.2rem;
   }
 }
 </style>
