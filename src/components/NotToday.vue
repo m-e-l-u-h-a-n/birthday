@@ -1,9 +1,7 @@
 <template>
   <div class="container">
-    <transition name="fade">
-      <div class="loading" v-if="isLoading">
-        <img src="../assets/loader.gif" />
-      </div>
+    <transition name="fade" mode="out-in">
+      <loading v-if="isLoading" />
       <div class="loaded" v-else>
         <figure>
           <img :src="imgSrc" />
@@ -16,17 +14,19 @@
 
 <script>
 const axios = require("axios");
+import loading from "./loading.vue";
 
 export default {
   name: "NotToday",
   data: () => {
     return { imgSrc: "", isLoading: true };
   },
+  components: { loading },
   methods: {
     giphy: async function() {
       let params = {
         api_key: "O7JknqEzMWfWjlqYzVjHYLt0TGmpigCn",
-        q: "Not now",
+        q: "No",
         limit: 12,
         lang: "en",
       };
@@ -35,8 +35,11 @@ export default {
       });
       this.imgSrc =
         response.data.data[
-          Math.floor(Math.random() * 10 + 1)
+          Math.floor(Math.random() * 4 + 1)
         ].images.original.url;
+
+      let loader = document.querySelector(".loading.active");
+      loader.classList.toggle("active");
       setTimeout(() => {
         this.isLoading = false;
       }, 1000);
@@ -56,22 +59,32 @@ export default {
   flex-direction: $dir;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: transform 1s ease-in;
+}
+
+.fade-enter {
+  transform: scaleY(0) translateZ(0);
+}
+
+.fade-leave-to {
+  transform: translateX(200%) rotate(1000deg);
+}
+
 .container {
+  overflow: hidden;
   @include flexCenter(column);
   width: 100%;
   height: 100vh;
-  background: black;
-  .loading img {
-    max-width: 100%;
-    padding: 20px;
-    filter: grayscale(50%);
-  }
+  background: #04090d;
 
   figure {
     text-align: center;
     padding: 20px;
     img {
       max-width: 100%;
+      filter: grayscale(50%);
     }
   }
   figcaption {

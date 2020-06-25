@@ -36,6 +36,6 @@ export default {
 }
 
 body {
-  background: black;
+  background: #04090d;
 }
 </style>
