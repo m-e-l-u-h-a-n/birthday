@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <not-today v-if="!date" />
-    <birthday v-else-if="date" />
+    <not-today v-if="!isToday" />
+    <birthday v-else-if="isToday" />
   </div>
 </template>
 
@@ -15,8 +15,10 @@ export default {
     Birthday,
   },
   data: () => {
+    var today = new Date();
+    var birthday = new Date(2020, 6, 14);
     return {
-      date: Date.parse(2020, 7, 14) == Date.now(),
+      isToday: birthday <= today,
     };
   },
 };

@@ -4,8 +4,8 @@
       <loading v-if="isLoading" />
       <div class="loaded" v-else>
         <figure>
-          <img :src="imgSrc" />
-          <figcaption>Seriously is it 14 July Already.</figcaption>
+          <video autoplay loop controls :src="imgSrc" />
+          <timer />
         </figure>
       </div>
     </transition>
@@ -13,40 +13,34 @@
 </template>
 
 <script>
-const axios = require("axios");
 import loading from "./loading.vue";
+import timer from "./Timer.vue";
 
 export default {
   name: "NotToday",
   data: () => {
-    return { imgSrc: "", isLoading: true };
+    return {
+      imgSrc: "",
+      isLoading: true,
+      images: [
+        "https://media.giphy.com/media/xThtavV3Ds2631gcWk/giphy.mp4",
+        "https://media.giphy.com/media/l4FsoQeVeMBqp662c/giphy.mp4",
+        "https://media.giphy.com/media/MEF1VadKbQBdmd8LCn/giphy.mp4",
+        "https://media.giphy.com/media/xT9KVmZwJl7fnigeAg/giphy.mp4",
+        "https://media.giphy.com/media/1oGnXs7DolDPnyVqt2/giphy.mp4",
+        "https://media.giphy.com/media/d2ZcfODrNWlA5Gg0/giphy.mp4",
+      ],
+    };
   },
-  components: { loading },
-  methods: {
-    giphy: async function() {
-      let params = {
-        api_key: "O7JknqEzMWfWjlqYzVjHYLt0TGmpigCn",
-        q: "No",
-        limit: 12,
-        lang: "en",
-      };
-      let response = await axios.get("https://api.giphy.com/v1/gifs/search", {
-        params: params,
-      });
-      this.imgSrc =
-        response.data.data[
-          Math.floor(Math.random() * 4 + 1)
-        ].images.original.url;
-
-      let loader = document.querySelector(".loading.active");
-      loader.classList.toggle("active");
-      setTimeout(() => {
-        this.isLoading = false;
-      }, 1000);
-    },
-  },
+  components: { loading, timer },
   mounted() {
-    this.giphy().catch((e) => console.log(e));
+    let select = Math.floor(Math.random() * 5);
+    this.imgSrc = this.images[select];
+    let loader = document.querySelector(".loading.active");
+    setTimeout(() => {
+      loader.classList.toggle("active");
+      this.isLoading = false;
+    }, 1000);
   },
 };
 </script>
@@ -75,16 +69,14 @@ export default {
 .container {
   overflow: hidden;
   @include flexCenter(column);
-  width: 100%;
+  margin: 1.5rem auto;
   height: 100vh;
-  background: #04090d;
-
+  width: 100%;
   figure {
     text-align: center;
     padding: 20px;
-    img {
+    video {
       max-width: 100%;
-      filter: grayscale(50%);
     }
   }
   figcaption {

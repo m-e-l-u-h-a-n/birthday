@@ -27,6 +27,13 @@ export default {
   animation: animate 0.5s linear infinite;
 }
 
+@media only screen and (max-width: 720px) {
+  div .loading {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .loading {
   position: relative;
   width: 300px;
