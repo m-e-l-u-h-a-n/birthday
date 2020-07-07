@@ -1,43 +1,60 @@
 <template>
-  <div id="app">
-    <not-today v-if="!isToday" />
-    <birthday v-else-if="isToday" />
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content>
+      <HelloWorld/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import NotToday from "./components/NotToday.vue";
-import Birthday from "./components/Birthday.vue";
+import HelloWorld from './components/HelloWorld';
+
 export default {
-  name: "App",
+  name: 'App',
+
   components: {
-    NotToday,
-    Birthday,
+    HelloWorld,
   },
-  data: () => {
-    var today = new Date();
-    var birthday = new Date(2020, 6, 14);
-    return {
-      isToday: birthday <= today,
-    };
-  },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-<style lang="scss">
-@import url(https://fonts.googleapis.com/css?family=Cinzel);
-
-:root {
-  font-size: 16px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Cinzel";
-}
-
-body {
-  background: #04090d;
-}
-</style>
