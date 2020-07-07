@@ -4,7 +4,7 @@
       <loading v-if="isLoading" />
       <div class="loaded" v-else>
         <figure>
-          <video autoplay loop controls :src="imgSrc" />
+          <video autoplay loop :src="imgSrc" />
           <timer />
         </figure>
       </div>
