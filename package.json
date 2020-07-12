@@ -9,9 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vuetify": "^2.2.11",
-    "vuex": "^3.4.0"
+    "gsap": "^3.4.0",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
@@ -24,8 +23,6 @@
     "node-sass": "^4.12.0",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.2",
-    "vue-cli-plugin-vuetify": "~2.0.6",
-    "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.3.0"
+    "vue-template-compiler": "^2.6.11"
   }
 }

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Gallery></Gallery>
+  <div id="main">
+    <Gallery v-if="images"></Gallery>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
     wish: function() {
       const c = document.createElement("canvas");
       c.setAttribute.id = "c";
-      var app = document.getElementById("app");
+      var app = document.getElementById("main");
       app.appendChild(c);
       var w = (c.width = window.innerWidth),
         h = (c.height = window.innerHeight),
@@ -474,7 +474,7 @@ export default {
           this.spawnA = (center - center / 4) | 0;
           this.spawnB = (center + center / 4) | 0;
 
-          this.height = canvas.height = window.innerHeight;
+          this.height = canvas.height = window.outerHeight;
           this.spawnC = this.height * 0.1;
           this.spawnD = this.height * 0.5;
         }
@@ -597,7 +597,12 @@ export default {
       }
       let canvas = document.createElement("canvas");
       canvas.setAttribute.id = "birthday";
-      var app = document.getElementById("app");
+      canvas.setAttribute(
+        "style",
+        "position: fixed;top: 0;left: 0;display: block; z-index:-1"
+      );
+
+      var app = document.getElementById("main");
       app.appendChild(canvas);
       let ctx = canvas.getContext("2d");
 
@@ -621,17 +626,9 @@ export default {
   },
   mounted() {
     this.wish();
-    setTimeout(() => this.background(), 12000);
+    setTimeout(() => this.background(), 13000);
   },
 };
 </script>
 
-<style lang="scss" scoped>
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  pointer-events: auto;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -1,6 +1,6 @@
 <template>
   <div class="container-timer">
-    <h1>Countdown to your birthday:</h1>
+    <h1>Countdown to your birthday</h1>
     <ul>
       <li>{{ days }}</li>
       <li>{{ hours }}</li>
@@ -48,20 +48,23 @@ export default {
 <style lang="scss" scoped>
 h1 {
   font-weight: normal;
+  text-align: center;
 }
 
 li {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  text-align: center;
   list-style-type: none;
-  padding: 1em;
+  padding: 0.8em;
   text-transform: uppercase;
 }
 
 .container-timer {
+  text-align: center;
   color: white;
   text-shadow: 2px 2px #a1a1a1;
-  font-size: 0.8rem;
-  margin: 10px auto;
+  font-size: 0.85rem;
+  margin: 9px auto;
 }
 </style>

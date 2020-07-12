@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="notToday">
     <transition name="fade" mode="out-in">
       <loading v-if="isLoading" />
       <div class="loaded" v-else>
         <figure>
-          <video autoplay loop controls :src="imgSrc" />
+          <video muted autoplay="autoplay" loop="true" :src="imgSrc" />
           <timer />
         </figure>
       </div>
@@ -15,7 +15,6 @@
 <script>
 import loading from "./loading.vue";
 import timer from "./Timer.vue";
-
 export default {
   name: "NotToday",
   data: () => {
@@ -52,37 +51,28 @@ export default {
   align-items: center;
   flex-direction: $dir;
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition: transform 1s ease-in;
 }
-
 .fade-enter {
   transform: scaleY(0) translateZ(0);
 }
-
 .fade-leave-to {
   transform: translateX(200%) rotate(1000deg);
 }
-
-.container {
+.notToday {
+  background: black;
   overflow: hidden;
   @include flexCenter(column);
-  margin: 1.5rem auto;
-  height: 100vh;
+  padding: 0;
   width: 100%;
+  height: 100vh;
   figure {
     text-align: center;
-    padding: 20px;
-    video {
-      max-width: 100%;
-    }
   }
-  figcaption {
-    color: white;
-    text-shadow: 2px 2px #a1a1a1;
-    font-size: 1.2rem;
+  video {
+    max-width: 95%;
   }
 }
 </style>
