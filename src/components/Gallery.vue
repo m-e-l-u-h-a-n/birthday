@@ -6,40 +6,52 @@
     <section class="container hero">
       <div class="hero__inner">
         <div class="hero__images">
-          <img class="hero__image" src="https://picsum.photos/1200/800" />
+          <img
+            class="hero__image"
+            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0000.jpg?alt=media&token=05bd1db7-1bc3-46c8-bb2d-494c1d08d5cc"
+          />
         </div>
         <div class="hero__content">
-          <div class="hero__headline"><span>Happy Birthday CTS</span></div>
+          <div class="hero__headline"><span>Meet Papa ki Pari</span></div>
         </div>
       </div>
     </section>
     <section class="container hero">
       <div class="hero__inner">
         <div class="hero__images">
-          <img class="hero__image" src="https://picsum.photos/1200/800" />
+          <img
+            class="hero__image"
+            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0007.jpg?alt=media&token=489d3ef6-fd00-40c0-a560-87b42b23bfa7"
+          />
         </div>
         <div class="hero__content">
-          <div class="hero__headline"><span>Happy Birthday CTS</span></div>
+          <div class="hero__headline"><span>Raider 🚴‍♀️</span></div>
         </div>
       </div>
     </section>
     <section class="container hero">
       <div class="hero__inner">
         <div class="hero__images">
-          <img class="hero__image" src="https://picsum.photos/1000/600" />
+          <img
+            class="hero__image"
+            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0008.jpg?alt=media&token=e9ca9a28-8def-4b3d-9c18-fd618512de3e"
+          />
         </div>
         <div class="hero__content">
-          <div class="hero__headline"><span>Happy Birthday CTS</span></div>
+          <div class="hero__headline"><span>Sone do Yaar</span></div>
         </div>
       </div>
     </section>
     <section class="container hero">
       <div class="hero__inner">
         <div class="hero__images">
-          <img class="hero__image" src="https://picsum.photos/1300/800" />
+          <img
+            class="hero__image"
+            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200713-WA0037.jpg?alt=media&token=ba805ed4-76e7-4bc3-ad3b-6182806a457b"
+          />
         </div>
         <div class="hero__content">
-          <div class="hero__headline"><span>Happy Birthday CTS</span></div>
+          <div class="hero__headline"><span>Ahh Fake Candid</span></div>
         </div>
       </div>
     </section>
@@ -98,25 +110,6 @@ export default {
       });
     });
 
-    gsap.utils.toArray(".scroll").forEach((section, index) => {
-      const w = section.querySelector(".wrapper");
-      const [x, xEnd] =
-        index % 2
-          ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
-          : [w.scrollWidth * -1, 0];
-      gsap.fromTo(
-        w,
-        { x },
-        {
-          x: xEnd,
-          scrollTrigger: {
-            trigger: section,
-            scrub: 0.5,
-          },
-        }
-      );
-    });
-
     document.body.style.overflow = "auto";
     document.scrollingElement.scrollTo(0, 0);
     gsap.utils.toArray(".demo-wrapper section").forEach((section, index) => {
@@ -132,7 +125,10 @@ export default {
           x: xEnd,
           scrollTrigger: {
             trigger: section,
-            scrub: 0.5,
+            start: "start 60%",
+            end: "+=720px",
+            ease: "power2",
+            scrub: 0.6,
           },
         }
       );
@@ -241,32 +237,5 @@ export default {
       transition-delay: var(--delay);
     }
   }
-}
-
-.demo-wrapper {
-  overflow-x: hidden;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: flex;
-  img {
-    width: 400px;
-  }
-}
-
-.demo-gallery:not(.last) {
-  padding-bottom: 1rem;
-}
-
-.demo-text .text {
-  font-size: clamp(8rem, 15vw, 16rem);
-  line-height: 1;
-  font-weight: 900;
-  color: white;
-}
-
-.demo-text .text:last-child {
-  padding-bottom: 200px;
 }
 </style>

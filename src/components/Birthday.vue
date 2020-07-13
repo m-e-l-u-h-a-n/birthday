@@ -1,6 +1,7 @@
 <template>
   <div id="main">
     <Gallery v-if="images"></Gallery>
+    <audio src="../assets/cool.mp3" loop id="track"></audio>
   </div>
 </template>
 
@@ -12,7 +13,7 @@ export default {
   components: { Gallery },
   data() {
     return {
-      text: ["HaPpY", "BirThday", "DuDe"],
+      text: ["HaPpY", "BirThday", "Chethana"],
       images: false,
     };
   },
@@ -625,6 +626,14 @@ export default {
     },
   },
   mounted() {
+    alert("Click on page please.");
+    document.addEventListener("click", musicPlay);
+    function musicPlay() {
+      let track = document.getElementById("track");
+      track.currentTime = 6;
+      track.play();
+      document.removeEventListener("click", musicPlay);
+    }
     this.wish();
     setTimeout(() => this.background(), 13000);
   },
