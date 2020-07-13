@@ -56,7 +56,7 @@
       </div>
     </section>
     <footer class="container">
-      <h2 class="container__headline">lorem ipsum.</h2>
+      <h2 class="container__headline">Not Over Yet :).</h2>
     </footer>
     <scrollGallery />
   </div>
