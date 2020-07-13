@@ -18,7 +18,7 @@ export default {
     var today = new Date();
     var birthday = new Date(2020, 6, 14);
     return {
-      isToday: birthday >= today,
+      isToday: birthday <= today,
     };
   },
 };

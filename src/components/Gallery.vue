@@ -47,7 +47,7 @@
       <h2 class="container__headline">lorem ipsum.</h2>
     </footer>
 
-    <section class="scroll demo-text">
+    <!-- <section class="scroll demo-text">
       <div class="wrapper text">
         ABCDEFGHIJKLMNOPQRSTUVWXYZ
       </div>
@@ -177,7 +177,7 @@
       <div class="wrapper text">
         ABCDEFGHIJKLMNOPQRSTUVWXYZ
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -201,16 +201,14 @@ export default {
     const images = gsap.utils.toArray(".hero__image");
 
     container.forEach((el) => {
-      gsap.to(el, {
-        scrollTrigger: {
-          trigger: el,
-          scrub: true,
-          pin: true,
-          start: "center center",
-          end: "bottom -100%",
-          toggleClass: "active",
-          ease: "power2",
-        },
+      ScrollTrigger.create({
+        trigger: el,
+        scrub: true,
+        pin: true,
+        start: "center center",
+        end: "bottom -100%",
+        toggleClass: "active",
+        ease: "power2",
       });
     });
 
@@ -219,8 +217,8 @@ export default {
         scrollTrigger: {
           trigger: el,
           scrub: 0.5,
-          start: "top bottom",
-          end: "bottom -300%",
+          start: "center center",
+          end: "bottom -50%",
           ease: "power2",
         },
         y: "-30%",
@@ -262,7 +260,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
+  padding: 0 10px;
   height: 100vh;
   height: -webkit-fill-available;
   color: white;
@@ -358,7 +357,7 @@ export default {
   display: -webkit-box;
   display: flex;
   img {
-    max-width: 800px;
+    width: 400px;
   }
 }
 
