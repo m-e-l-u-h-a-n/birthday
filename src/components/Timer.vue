@@ -1,6 +1,6 @@
 <template>
   <div class="container-timer">
-    <h1>Countdown to your birthday</h1>
+    <h1>Countdown begins</h1>
     <ul>
       <li>{{ days }}</li>
       <li>{{ hours }}</li>
@@ -63,7 +63,7 @@ li {
 .container-timer {
   text-align: center;
   color: white;
-  text-shadow: 2px 2px #a1a1a1;
+  text-shadow: 1px 1.5px #a1a1a1;
   font-size: 0.85rem;
   margin: 9px auto;
 }

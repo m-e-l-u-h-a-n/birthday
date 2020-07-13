@@ -46,138 +46,7 @@
     <footer class="container">
       <h2 class="container__headline">lorem ipsum.</h2>
     </footer>
-
-    <!-- <section class="scroll demo-text">
-      <div class="wrapper text">
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ
-      </div>
-    </section>
-    <section class="scroll demo-gallery">
-      <ul class="wrapper">
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=152"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=95"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=69"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=148"
-            width="1240"
-          />
-        </li>
-      </ul>
-    </section>
-    <section class="scroll demo-gallery">
-      <ul class="wrapper">
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=36"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=68"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=38"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=34"
-            width="1240"
-          />
-        </li>
-      </ul>
-    </section>
-    <section class="scroll demo-gallery">
-      <ul class="wrapper">
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=23"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=41"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=138"
-            width="1240"
-          />
-        </li>
-      </ul>
-    </section>
-    <section class="scroll demo-gallery">
-      <ul class="wrapper">
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=56"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=86"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=90"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://source.unsplash.com/random/1240x874?sig=162"
-            width="1240"
-          />
-        </li>
-      </ul>
-    </section>
-    <section class="scroll demo-text">
-      <div class="wrapper text">
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ
-      </div>
-    </section> -->
+    <scrollGallery />
   </div>
 </template>
 
@@ -186,8 +55,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+import scrollGallery from "./scrollGallery.vue";
 
 export default {
+  components: {
+    scrollGallery,
+  },
   data() {
     return {
       images: [],
@@ -226,6 +99,27 @@ export default {
     });
 
     gsap.utils.toArray(".scroll").forEach((section, index) => {
+      const w = section.querySelector(".wrapper");
+      const [x, xEnd] =
+        index % 2
+          ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
+          : [w.scrollWidth * -1, 0];
+      gsap.fromTo(
+        w,
+        { x },
+        {
+          x: xEnd,
+          scrollTrigger: {
+            trigger: section,
+            scrub: 0.5,
+          },
+        }
+      );
+    });
+
+    document.body.style.overflow = "auto";
+    document.scrollingElement.scrollTo(0, 0);
+    gsap.utils.toArray(".demo-wrapper section").forEach((section, index) => {
       const w = section.querySelector(".wrapper");
       const [x, xEnd] =
         index % 2
