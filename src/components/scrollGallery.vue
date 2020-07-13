@@ -183,7 +183,7 @@ export default {
     display: flex;
     justify-content: center;
     img {
-      margin-top: 40px;
+      margin-top: 60px;
       width: 100%;
       object-fit: cover;
     }
@@ -191,7 +191,13 @@ export default {
 }
 
 .king {
-  margin-top: 30px;
-  font-size: 20px;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+@media (min-width: 720px) {
+  .demo-wrapper ul {
+    justify-content: center;
+  }
 }
 </style>
