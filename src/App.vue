@@ -16,9 +16,9 @@ export default {
   },
   data: () => {
     var today = new Date();
-    var birthday = new Date(2021, 1, 1);
+    var birthday = new Date(2021, 14, 6);
     return {
-      isToday: birthday <= today,
+      isToday: birthday >= today,
     };
   },
 };
