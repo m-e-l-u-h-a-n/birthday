@@ -35,7 +35,7 @@ export default {
   },
   mounted() {
     // set your date here
-    let countDown = new Date("Jul 14, 2020 00:00:00").getTime();
+    let countDown = new Date("Jan 01, 2021 00:00:00").getTime();
     this.interval = setInterval(() => {
       let now = new Date().getTime(),
         distance = countDown - now;
