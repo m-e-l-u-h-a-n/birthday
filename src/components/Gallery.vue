@@ -125,7 +125,7 @@ export default {
     gsap.utils.toArray(".demo-wrapper section").forEach((section, index) => {
       const w = section.querySelector(".wrapper");
       const [x, xEnd] =
-        index % 2
+        (index % 2)
           ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
           : [w.scrollWidth * -1, 0];
       gsap.fromTo(
@@ -135,8 +135,8 @@ export default {
           x: xEnd,
           scrollTrigger: {
             trigger: section,
-            start: "start 60%",
-            end: "+=720px",
+            start: "start 20%",
+            end: "center center",
             ease: "power2",
             scrub: 0.6,
           },

@@ -5,14 +5,7 @@
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0001.jpg?alt=media&token=7eb24dac-2e86-4ec3-9ec9-f7fee0287142"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0002.jpg?alt=media&token=517606d4-918a-4e7f-a97c-7e9c659dfe39"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmishra_bg_sarnath.jpeg?alt=media&token=6ffe3035-d1bb-453c-92d3-5bdadfdda84b"
             width="1240"
           />
         </li>
@@ -23,14 +16,7 @@
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0005.jpg?alt=media&token=58daa4c3-7b6c-4e15-a366-5f309ddb4fb5"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0004.jpg?alt=media&token=c7cd1e29-ca84-4e42-8f71-dfe64e3e1c13"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmishra%2Bgyaan%2Bscooty.jpeg?alt=media&token=e17ce157-f727-4dc2-91cf-404fa063b963"
             width="1240"
           />
         </li>
@@ -41,14 +27,7 @@
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0003.jpg?alt=media&token=9e178ab3-6f24-4557-9ce8-2e12ec69e5fd"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0021.jpg?alt=media&token=f46c63a8-bd08-4d52-b9af-60ab0e9e1197"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmishra%2Bmovieman.jpeg?alt=media&token=75338334-c72a-49a7-8232-91c2330ff79f"
             width="1240"
           />
         </li>
@@ -59,14 +38,7 @@
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200713-WA0034.jpg?alt=media&token=2acc9d74-554d-4ff7-8023-a205a22f377d"
-            width="1240"
-          />
-        </li>
-        <li>
-          <img
-            height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200713-WA0043.jpg?alt=media&token=0f7cb674-e365-443e-ad3d-180cbf5bbf09"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Flonely_mishra_srnath.jpeg?alt=media&token=d0e26308-91c7-477e-b345-b5fa5326ac42"
             width="1240"
           />
         </li>
@@ -77,14 +49,21 @@
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/Screenshot_20200713-132534_Photos.jpg?alt=media&token=7d52b035-ce7e-4f36-b22a-f191f4047bef"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmishra%26friends.jpeg.jpeg?alt=media&token=7f32727c-cfc4-4cde-b969-fc9afc150a20"
             width="1240"
           />
         </li>
+      </ul>
+    </section>
+    <section class="increment">
+      Ahh Papa apne form q bhara?
+    </section>
+    <section class="demo-gallery">
+      <ul class="wrapper">
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/Screenshot_20200713-132943_Photos.jpg?alt=media&token=3e78b4a9-4e1e-4e9b-87ff-037df18738a3"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/memes%2Fmeme_messiah.jpeg?alt=media&token=715e5090-40ef-4b5c-b6b5-bc4ff572c18c"
             width="1240"
           />
         </li>
@@ -95,14 +74,40 @@
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/Screenshot_20200713-133046_Photos.jpg?alt=media&token=0d79aebb-a942-4cc5-85ee-600c5762880d"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/memes%2Fmeme_paranjay_papa.jpeg?alt=media&token=90d55974-624e-4693-9c00-f62d9d1f222e"
             width="1240"
           />
         </li>
+      </ul>
+    </section>
+    <section class="demo-gallery">
+      <ul class="wrapper">
         <li>
           <img
             height="874"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/Screenshot_20200713-133238_Photos.jpg?alt=media&token=ee51a02d-0872-49aa-be80-ebf21152927d"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/memes%2Fmeme_child.jpeg?alt=media&token=8982a2ad-a4c3-4eda-a630-c21c3ff15341"
+            width="1240"
+          />
+        </li>
+      </ul>
+    </section>
+    <section class="demo-gallery">
+      <ul class="wrapper">
+        <li>
+          <img
+            height="874"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/memes%2Fmeme_liion.jpeg?alt=media&token=253d6e75-72c2-4cfb-9f5b-7e0429c5276d"
+            width="1240"
+          />
+        </li>
+      </ul>
+    </section>
+    <section class="demo-gallery">
+      <ul class="wrapper">
+        <li>
+          <img
+            height="874"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/memes%2Fmeme_self_obsess.jpeg?alt=media&token=1f10d553-61a2-4995-a148-f7f8a31b3d96"
             width="1240"
           />
         </li>
@@ -116,7 +121,7 @@
         />
       </div>
       <section class="king">
-        website by Nebuchadnezzar.
+        Website by Sherlock.
       </section>
     </section>
   </div>
@@ -166,10 +171,15 @@ export default {
 .wrapper {
   display: -webkit-box;
   display: flex;
+  justify-content: center;
 }
 
 .demo-gallery:not(.last) {
   padding-bottom: 1rem;
+}
+
+.demo-gallery {
+  justify-content: center;
 }
 
 .increment {
@@ -178,6 +188,7 @@ export default {
   align-items: center;
   flex-direction: column;
   color: white;
+  text-align: center;
   font-size: 40px;
   .imgbox {
     display: flex;

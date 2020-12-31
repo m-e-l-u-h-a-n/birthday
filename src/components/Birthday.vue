@@ -13,7 +13,7 @@ export default {
   components: { Gallery },
   data() {
     return {
-      text: ["HaPpY", "BirThday", "Chethana"],
+      text: ["HaPpY", "BirThday", "Utkarsh"],
       images: false,
     };
   },
