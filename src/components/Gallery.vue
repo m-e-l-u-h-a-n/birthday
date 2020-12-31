@@ -8,7 +8,7 @@
         <div class="hero__images">
           <img
             class="hero__image"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0000.jpg?alt=media&token=05bd1db7-1bc3-46c8-bb2d-494c1d08d5cc"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmishra_with_guitar.jpeg?alt=media&token=dee9654d-2bf9-4e75-90f9-ff2ffe85030b"
           />
         </div>
         <div class="hero__content">
@@ -21,11 +21,11 @@
         <div class="hero__images">
           <img
             class="hero__image"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0007.jpg?alt=media&token=489d3ef6-fd00-40c0-a560-87b42b23bfa7"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmishra%2Bharshit%2Bsooty.jpeg?alt=media&token=bffe73d8-e587-4c72-a0e0-65bf2310f736"
           />
         </div>
         <div class="hero__content">
-          <div class="hero__headline"><span>Raider 🚴‍♀️</span></div>
+          <div class="hero__headline"><span>Kabir Singh and Murli(lite)</span></div>
         </div>
       </div>
     </section>
@@ -34,11 +34,11 @@
         <div class="hero__images">
           <img
             class="hero__image"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200712-WA0008.jpg?alt=media&token=e9ca9a28-8def-4b3d-9c18-fd618512de3e"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmechanic_mishra.jpeg?alt=media&token=0b60abaf-ad27-4b3b-90ee-8e5aecd5f73e"
           />
         </div>
         <div class="hero__content">
-          <div class="hero__headline"><span>Sone do Yaar</span></div>
+          <div class="hero__headline"><span>Mechanic Mishra</span></div>
         </div>
       </div>
     </section>
@@ -47,17 +47,27 @@
         <div class="hero__images">
           <img
             class="hero__image"
-            src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/IMG-20200713-WA0037.jpg?alt=media&token=ba805ed4-76e7-4bc3-ad3b-6182806a457b"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fmishra%2Bthakur%2Bchappal.jpeg?alt=media&token=21f4cab2-1011-44e0-8156-42ba7b3fd093"
           />
         </div>
         <div class="hero__content">
-          <div class="hero__headline"><span>Ahh Fake Candid</span></div>
+          <div class="hero__headline"><span>Short GPL(from CRs)</span></div>
         </div>
       </div>
     </section>
-    <footer class="container">
-      <h2 class="container__headline">Not Over Yet :).</h2>
-    </footer>
+        <section class="container hero">
+      <div class="hero__inner">
+        <div class="hero__images">
+          <img
+            class="hero__image"
+            src="https://firebasestorage.googleapis.com/v0/b/birthday-218c6.appspot.com/o/good%20photos%2Fcheers_mishra.jpeg?alt=media&token=af905004-c30d-47c9-be45-d65d94be129d"
+          />
+        </div>
+        <div class="hero__content">
+          <div class="hero__headline"><span>Cheers Party begins</span></div>
+        </div>
+      </div>
+    </section>
     <scrollGallery />
   </div>
 </template>
