@@ -114,12 +114,6 @@
       </ul>
     </section>
     <section class="increment">
-      Let's Meet the Team
-      <div class="imgbox">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/just-image-storage.appspot.com/o/cbdayy.png?alt=media&token=9ba39f2f-3cb7-4e21-85b7-ef802a6347ea"
-        />
-      </div>
       <section class="king">
         Website by Sherlock.
       </section>
