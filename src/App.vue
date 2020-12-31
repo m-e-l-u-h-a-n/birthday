@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Birthday v-if="isToday" />
+  <NotToday v-else />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NotToday from "./components/NotToday";
+import Birthday from "./components/Birthday";
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
-  }
-}
+    NotToday,
+    Birthday,
+  },
+  data: () => {
+    var today = new Date();
+    var birthday = new Date(2020, 6, 14);
+    return {
+      isToday: birthday <= today,
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+
+:root {
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cinzel";
+}
+
+body {
+  background: #04090d;
+  cursor: crosshair;
 }
 </style>
